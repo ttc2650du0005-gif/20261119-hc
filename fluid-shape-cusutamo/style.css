@@ -1,0 +1,463 @@
+
+@charset "utf-8";
+
+/* ====================
+  全体共通
+==================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #805765;
+  font-size: 16px;
+  min-width: 320px;
+  font-family: "Arial", "Noto Sans JP", sans-serif;
+  background: #fff9fb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ====================
+  header
+==================== */
+
+header {
+  height: 596px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 85% 25%,
+    #f5c3d5 0 18%,
+    transparent 18.5%),
+    linear-gradient(135deg, #fff5f8, #f9dce7);
+}
+
+/* ロゴ・ナビ */
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.links .logo {
+  font-size: 35px;
+  color: #d77c9d;
+  letter-spacing: 2px;
+}
+
+.links nav {
+  display: flex;
+  gap: 40px;
+}
+
+.links nav a {
+  color: #a66b80;
+  transition: .3s;
+}
+
+.links nav a:hover {
+  color: #e58bab;
+}
+
+/* メインコピー */
+
+.main-copy {
+  width: 100%;
+  font-size: 54px;
+  font-weight: bold;
+  text-align: center;
+  margin: 120px 0 0;
+  letter-spacing: .08em;
+  color: #d77c9d;
+}
+
+/* サブコピー */
+
+.sub-copy {
+  font-size: 24px;
+  line-height: 1.8;
+  position: absolute;
+  left: 12%;
+  bottom: 40px;
+  color: #a66b80;
+}
+
+/* ヘッダーのリボン */
+
+.header-ribbon {
+  position: absolute;
+  right: 15%;
+  bottom: 65px;
+  font-size: 100px;
+  color: white;
+  transform: rotate(15deg);
+  text-shadow: 3px 5px 10px #e4a4bc;
+}
+
+/* ====================
+  main共通
+==================== */
+
+main {
+  width: 1200px;
+  max-width: 90%;
+  margin: auto;
+}
+
+section {
+  margin: 120px auto;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 1em;
+  color: #d77c9d;
+}
+
+.text-area p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.eyebrow {
+  color: #d99ab0;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+/* ====================
+  feature
+==================== */
+
+.feature {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.feature .text-area {
+  margin-top: 50px;
+  min-width: 250px;
+}
+
+/* 特徴エリア */
+
+.features {
+  width: 680px;
+  height: 600px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.features > div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px #eac0cf;
+}
+
+.features h3 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.features p {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* 中央 */
+
+.center {
+  background: linear-gradient(135deg, #efb1c9, #d9799e);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 左 */
+
+.left {
+  background: linear-gradient(135deg, #f8d2df, #e9a5bc);
+  left: 0;
+  bottom: 0;
+}
+
+/* 右 */
+
+.right {
+  background: linear-gradient(135deg, #e9a8bf, #cb7195);
+  right: 0;
+  bottom: 0;
+}
+
+/* 小さなリボン */
+
+.mini-ribbon {
+  margin-top: 30px;
+  font-size: 55px;
+  color: #e9a0b9;
+}
+
+/* ====================
+  concept
+==================== */
+
+.new-era {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.new-era .text-area {
+  width: 55%;
+}
+
+/* リボンの装飾エリア */
+
+.ribbon-box {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  border-radius: 48% 52% 45% 55%;
+  background: linear-gradient(135deg, #fbe1e9, #f3b9ce);
+  box-shadow: 0 15px 35px #f1cfdb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* リボン本体 */
+
+.big-bow {
+  width: 210px;
+  height: 150px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* 左右の輪 */
+
+.bow-left,
+.bow-right {
+  position: absolute;
+  width: 95px;
+  height: 85px;
+  top: 15px;
+  background: linear-gradient(135deg, #f8c4d6, #d96f96);
+  box-shadow: inset 0 5px 12px #ffffff80;
+}
+
+.bow-left {
+  left: 5px;
+  border-radius: 80% 20% 65% 35%;
+  transform: rotate(15deg);
+}
+
+.bow-right {
+  right: 5px;
+  border-radius: 20% 80% 35% 65%;
+  transform: rotate(-15deg);
+}
+
+/* 真ん中の結び目 */
+
+.bow-center {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #e993b1, #c75e87);
+  border-radius: 40%;
+  left: 82px;
+  top: 35px;
+  z-index: 2;
+}
+
+/* リボンの垂れ部分 */
+
+.bow-tail-left,
+.bow-tail-right {
+  position: absolute;
+  width: 42px;
+  height: 75px;
+  top: 75px;
+  background: linear-gradient(135deg, #e990ae, #d36c91);
+}
+
+.bow-tail-left {
+  left: 60px;
+  transform: rotate(20deg);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 50% 80%, 20% 100%);
+}
+
+.bow-tail-right {
+  right: 60px;
+  transform: rotate(-20deg);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 50% 80%, 20% 100%);
+}
+
+.ribbon-box p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.ribbon-box small {
+  letter-spacing: 4px;
+}
+
+/* ====================
+  footer
+==================== */
+
+footer {
+  height: 250px;
+  background: linear-gradient(135deg, #e9a5bc, #d77c9d);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-ribbon {
+  font-size: 45px;
+  color: white;
+}
+
+.copyright {
+  color: white;
+  margin-top: 20px;
+}
+
+/* ====================
+  レスポンシブ
+==================== */
+
+@media screen and (max-width: 768px) {
+
+  header {
+    height: 550px;
+  }
+
+  .links {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .links .logo {
+    font-size: 28px;
+  }
+
+  .links nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-copy {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  .sub-copy {
+    font-size: 17px;
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .header-ribbon {
+    right: 10%;
+    bottom: 120px;
+    font-size: 65px;
+  }
+
+  main {
+    max-width: 92%;
+  }
+
+  section {
+    margin: 70px auto;
+  }
+
+  .feature {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature .text-area {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .features {
+    width: 100%;
+    height: 520px;
+  }
+
+  .features > div {
+    width: 220px;
+    height: 220px;
+  }
+
+  .features h3 {
+    font-size: 14px;
+  }
+
+  .features p {
+    font-size: 12px;
+  }
+
+  .center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .new-era {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .new-era .text-area {
+    width: 100%;
+  }
+
+  .ribbon-box {
+    width: 280px;
+    height: 280px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  footer {
+    height: 180px;
+  }
+}
