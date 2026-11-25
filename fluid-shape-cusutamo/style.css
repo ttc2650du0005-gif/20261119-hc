@@ -1,0 +1,356 @@
+
+@charset "utf-8";
+
+/* =========================
+   基本設定
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  margin: 0;
+  background: #fff9fc;
+  color: #e34d83;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.site-header {
+  width: 84%;
+  margin: 0 auto;
+  padding: 32px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 3.5vw, 38px);
+  font-weight: bold;
+
+  color: #df5689;
+}
+
+nav {
+  display: flex;
+  gap: 34px;
+}
+
+nav a {
+  color: #df5689;
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   メインビジュアル
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 420px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 右上の淡いピンクの丸 */
+.hero::before {
+  content: "";
+
+  position: absolute;
+  width: 430px;
+  height: 430px;
+
+  right: -55px;
+  top: -155px;
+
+  border-radius: 50%;
+  background: #fbedf3;
+}
+
+/* メインの文字 */
+.hero-copy {
+  position: relative;
+  z-index: 1;
+
+  width: 54%;
+  padding-top: 75px;
+
+  text-align: center;
+}
+
+.hero-copy h2 {
+  margin: 0 0 24px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 50px);
+
+  color: #df5689;
+}
+
+/* 横長のリボン画像 */
+.line-ribbon {
+  width: min(80%, 400px);
+  margin: 0 auto 18px;
+}
+
+.hero-copy p {
+  margin: 0;
+
+  font-size: clamp(16px, 2vw, 21px);
+  line-height: 1.8;
+}
+
+/* 右上の大きなリボン */
+.hero-bow {
+  position: absolute;
+  z-index: 2;
+
+  width: min(38%, 370px);
+
+  top: 10px;
+  right: 3%;
+}
+
+
+/* =========================
+   リボンの魅力
+========================= */
+
+.feature {
+  width: 84%;
+  margin: 70px auto 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 45px;
+
+  min-height: 400px;
+}
+
+
+/* 丸を配置する部分 */
+.circle-group {
+  position: relative;
+
+  width: 100%;
+  max-width: 430px;
+
+  aspect-ratio: 1 / 0.95;
+  margin: 0 auto;
+}
+
+
+/* 3つの丸の共通設定 */
+.circle {
+  position: absolute;
+
+  width: 51%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 18px;
+}
+
+.circle h3 {
+  margin: 0 0 18px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.circle p {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+/* 上の丸 */
+.circle-top {
+  top: 0;
+  left: 25%;
+
+  background: #f9dfe5;
+}
+
+/* 左下の丸 */
+.circle-left {
+  bottom: 0;
+  left: 2%;
+
+  background: #fbe7ec;
+}
+
+/* 右下の丸 */
+.circle-right {
+  bottom: 0;
+  right: 2%;
+
+  background: #eac8d0;
+}
+
+
+/* 右側の説明 */
+.feature-copy {
+  text-align: center;
+}
+
+.feature-copy .line-ribbon {
+  width: 85%;
+  margin-bottom: 25px;
+}
+
+.feature-copy h2 {
+  margin: 0 0 18px;
+
+  font-size: clamp(22px, 2.7vw, 29px);
+  font-weight: normal;
+}
+
+.feature-copy p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =========================
+   お気に入りのリボン
+========================= */
+
+.item-section {
+  width: 84%;
+  margin: 95px auto 80px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 65px;
+  align-items: center;
+}
+
+
+/* 左側の説明 */
+.item-copy {
+  text-align: center;
+
+  max-width: 330px;
+  justify-self: center;
+}
+
+.item-copy .line-ribbon {
+  width: 95%;
+  margin-bottom: 25px;
+}
+
+.item-copy h2 {
+  margin: 0 0 18px;
+
+  font-size: clamp(22px, 2.7vw, 29px);
+  font-weight: normal;
+}
+
+.item-copy p {
+  margin: 22px 0 0;
+
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* 右側の写真 */
+.item-photo {
+  width: 100%;
+  max-width: 370px;
+
+  justify-self: center;
+
+  border-radius: 42% 42% 35% 35%;
+  object-fit: cover;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+  position: relative;
+
+  min-height: 190px;
+  padding: 65px 20px 35px;
+
+  background: #fbedf3;
+  text-align: center;
+}
+
+/* フッター上部の波 */
+footer::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: -45px;
+
+  height: 70px;
+
+  background: #fbedf3;
+
+  clip-path: ellipse(70% 60% at 50% 100%);
+}
+
+footer p {
+  position: relative;
+
+  margin: 0;
+  font-size: 24px;
+}
+
+
+/* フッターのリボン画像 */
+.footer-bow {
+  position: relative;
+  z-index: 1;
+
+  width: 250px;
+
+  margin: -120px 0 0 2%;
+}
+
+
